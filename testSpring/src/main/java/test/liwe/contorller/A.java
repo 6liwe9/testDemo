@@ -3,6 +3,7 @@ package test.liwe.contorller;
 public class A {
 	public String a;
 	public String b;
+	public String c;
 	public String getA() {
 		return a;
 	}
