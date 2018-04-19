@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry location="D:\instantclient_12_2\ojdbc8.jar" />
+	<context id="context1">
+		<jdbcConnection driverClass="oracle.jdbc.OracleDriver"
+			connectionURL="jdbc:oracle:thin:@192.168.52.57:1521:credit" userId="C##TC"
+			password="tc" />
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- 生成model类 -->
+		<javaModelGenerator targetPackage="com.pcb.tj.general.config.dao.model"
+			targetProject="D:/mybatis/src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<!-- 生成mapper xml文件 -->
+		<sqlMapGenerator targetPackage="mybatis.mapper.config"
+			targetProject="D:/mybatis/src/main/resources">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.pcb.tj.general.config.dao.mapper" targetProject="D:/mybatis/src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<table schema="" tableName="M_DB_CONFIG" domainObjectName="DBConfig">
+			<columnOverride column="id" javaType="java.math.BigDecimal" />
+			<columnOverride column="depart_id" javaType="java.math.BigDecimal" />
+			<columnOverride column="url_protocol" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="ip_domain" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="port" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="db_sid" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="user_name" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="password" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="db_mold" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="db_buss_def" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="t_f_name" javaType="String"
+				jdbcType="VARCHAR" />
+		</table>
+		<table schema="" tableName="M_DICT_RELATION" domainObjectName="DictRelation">
+			<columnOverride column="id" javaType="java.math.BigDecimal" />
+			<columnOverride column="credit_dict_table" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="bank_dict_field" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="credit_dict_table_dsc"
+				javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="bank_dict_field_dsc" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="credit_dict_value" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="credit_dict_name_dsc"
+				javaType="String" jdbcType="VARCHAR" />
+			<columnOverride column="bank_dict_value" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="bank_dict_name_bak" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="credit_dict_level" javaType="java.math.BigDecimal" />
+			<columnOverride column="credit_dict_role" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="comments" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="dict_relation_type" javaType="java.math.BigDecimal" />
+		</table>
+		<table schema="" tableName="M_FIELD_CONFIG" domainObjectName="FieldConfig">
+			<columnOverride column="id" javaType="java.math.BigDecimal" />
+			<columnOverride column="inf_rec_type" javaType="java.math.BigDecimal" />
+			<columnOverride column="credit_field" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="bank_field" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="field_type" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="field_condition" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="field_check" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="depart_id" javaType="java.math.BigDecimal" />
+			<columnOverride column="top_depart_id" javaType="java.math.BigDecimal" />
+			<columnOverride column="dict_relation_type" javaType="java.math.BigDecimal" />
+			<columnOverride column="field_describe" javaType="String"
+				jdbcType="VARCHAR" />
+			<columnOverride column="db_config_id" javaType="java.math.BigDecimal" />
+		</table>
+	</context>
+</generatorConfiguration>  
